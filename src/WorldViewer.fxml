@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="600.0" maxWidth="1000.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyController">
+   <children>
+      <GridPane id="grid" alignment="CENTER" layoutX="-3.0" layoutY="213.0" prefHeight="192.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="10.0" prefWidth="434.8434600830078" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="295.45300674438477" minHeight="10.0" prefHeight="206.4137191772461" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="109.88606262207031" minHeight="0.0" prefHeight="43.32244873046875" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="109.17922973632812" minHeight="10.0" prefHeight="64.76217651367188" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="58.06195068359375" minHeight="10.0" prefHeight="52.237823486328125" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="lookRight" mnemonicParsing="false" onAction="#turnRight" text="Look right" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets right="13.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="moveForward" mnemonicParsing="false" onAction="#move" text="Forward" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></Button>
+            <Button fx:id="lookLeft" mnemonicParsing="false" onAction="#turnLeft" text="Look Left" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="13.0" />
+               </GridPane.margin></Button>
+            <TextArea fx:id="messageOutput" prefHeight="89.0" prefWidth="334.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <TextField fx:id="messageInput" onAction="#command" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <ImageView fx:id="mainImage" fitHeight="221.0" fitWidth="385.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <GridPane prefHeight="200.0" prefWidth="577.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fx:id="objectInLocation1" fitHeight="75.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true" x="50.0" y="50.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </ImageView>
+                  <ImageView fx:id="objectInLocation2" fitHeight="78.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <ImageView fx:id="objectInLocation3" fitHeight="63.0" fitWidth="84.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  <ImageView fx:id="objectInLocation4" fitHeight="69.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
